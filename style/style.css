@@ -1,0 +1,459 @@
+body {
+  font-family:Source Sans Pro;
+  /* background-color:#eee; */
+}
+
+svg {
+  user-select:none;
+}
+
+h1 {
+  margin-left:0.5em;
+}
+
+.player-menu-header-cell {
+  cursor:pointer;
+  background-color:white;
+}
+
+a {
+  color:#173f5f;
+}
+
+a:hover {
+  color:#ed553b;
+}
+
+.pageHeader {
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:2;
+  border-bottom:2px solid #173f5f;
+  width:100%;
+  font-size:2em;
+  font-weight:700;
+  background-color:white;
+}
+
+.pageHeaderContents {
+  max-width:1000px;
+  margin:auto;
+}
+
+.pageExplainer {
+  border:2px solid #eee;
+}
+
+.pageBody {
+  padding-top:4em;
+  max-width:1000px;
+  margin:auto;
+}
+
+.playerMenuFilters {
+  border:1px solid black;
+}
+
+
+.modelerAndStats {
+  display:none;
+}
+
+.modeler {
+  margin:0 auto;
+  text-align:center;
+}
+
+#playerMenu {
+  display:table;
+  margin:0 auto;
+}
+
+.player-name-link {
+  text-decoration:underline;
+  font-weight:600;
+  color:#20639b;
+  cursor:pointer;
+}
+
+.player-name-link:hover {
+  color:#ed553b;
+}
+
+.player-menu-header-row {
+  display:table-row;
+  border-bottom:1px;
+  min-width:100%;
+  background-color:#aaa;
+  font-size:0.8em;
+}
+
+.player-menu-header-cell {
+  display:table-cell;
+  padding-right:1em;
+  padding-left:1em;
+  border-bottom:2px solid #173f5f;
+  vertical-align: bottom;
+}
+
+.align-center {
+  text-align:center;
+}
+
+.player-menu-cell {
+  display:table-cell;
+  border:1px solid #eee;
+  vertical-align:middle;
+  background-color:white;
+}
+
+.player-menu-row-hidden {
+  display:none;
+}
+
+.player-menu-row-visible {
+  display:table-row;
+}
+
+.stat-group-numberline {
+  margin-bottom:2em;
+  padding-top:1em;
+  padding-bottom:1em;
+  border-bottom:1px solid #aaa;
+  border-top:1px solid #aaa;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.125)
+}
+
+.playerValue {
+  font-weight:bold;
+}
+
+.stats-numberline-sub-table {
+  background-color:#eee;
+}
+
+.stats-numberline-table {
+  display:table;
+  padding-left:2em;
+  margin-bottom:2em;
+}
+
+.stats-numberline-table-row {
+  display:table-row;
+}
+
+.stats-numberline-start-group div {
+  border-top:1px solid #aaa;
+  background-color:#fafafa ;
+}
+
+.stats-number-line-related-to-next {
+  background-color:#fafafa;
+}
+
+
+.stats-number-line-related-to-previous {
+  background-color:#fafafa;
+}
+
+
+.stats-number-line-end-group div {
+  border-bottom:1px solid #aaa;
+  background-color:#fafafa;
+}
+
+
+.stats-numberline-table-cell {
+  display:table-cell;
+  vertical-align:middle;
+  font-size:0.8em;
+  font-weight:bold;
+}
+
+.stats-numberline-header-cell {
+  display:table-cell;
+  border-bottom:2px solid #999;
+  font-size:0.8em;
+  font-weight:normal;
+  color:#999;
+}
+
+.right-align {
+  text-align:right;
+  cursor:pointer;
+}
+
+.center-align {
+  text-align:center;
+}
+
+.stats-numberline-table-cell:hover {
+  color:#ed553b;
+}
+
+.left-align {
+  text-align:left;
+  cursor:pointer;
+}
+
+.stats-section-header {
+  font-weight:600;
+  font-size:1.5em;
+  padding-left:0.25em;
+  margin-bottom:0.5em;
+}
+
+.stats-subsection-header {
+  padding-left:0.75em;
+  font-weight:500;
+  font-size:1.25em;
+  margin-bottom:0.5em;
+}
+
+.tooltipNumberlinePlayerName {
+  font-weight:600;
+  margin-bottom:0.5em;
+  padding-right:1.5em;
+}
+
+.tooltipNumberLineValueLine {
+  font-weight:400;
+}
+
+.tooltipNumberlineStatName {
+}
+
+.tooltipNumberlineStatValue {
+  font-weight:bold;
+}
+
+.tooltipNumberlineZScoreStatement {
+  font-style:italic;
+}
+
+.significantlyBelowMean {
+  color:#ed553b;
+  font-weight:600;
+}
+
+.wellBelowMean {
+  color:#ed553b;
+  font-weight:600;
+}
+
+.belowMean {
+  color:#173f5f;
+  font-weight:600;
+}
+
+.aboveMean {
+  color:#173f5f;
+  font-weight:600;
+}
+
+.wellAboveMean {
+  color:#3caea3;
+  font-weight:600;
+}
+
+.significantlyAboveMean {
+  color:#3caea3;
+  font-weight:600;
+}
+
+.tooltipStatMean {
+  font-weight:bold;
+}
+
+.tooltipStatName {
+  font-weight:bold;
+}
+
+.tooltipDeviationInterval {
+  font-weight:bold;
+}
+
+.tooltip {
+  max-width:200px;
+  border:1px solid black;
+  padding:0.5em;
+  position:absolute;
+  background-color:white;
+  left:0;
+  display:none;
+  box-shadow:3px 3px 5px rgba(0,0,0,0.5);
+  font-size:0.8em;
+}
+
+#playerPosition {
+  max-width:200px;
+  border:1px solid black;
+  padding:0.5em;
+  position:absolute;
+  background-color:white;
+  left:0;
+  top:0;
+  display:none;
+  box-shadow:3px 3px 5px rgba(0,0,0,0.5);
+}
+
+
+#searchPlayers {
+  width:100%;
+  font-size:1.2em;
+  outline:none;
+  margin-top:0.25em;
+  margin-bottom:0.25em;
+}
+
+.filter-active {
+  background-color:#ed553B;
+  color:white;
+  stroke:1px solid white;
+}
+
+.filter-inactive {
+  background-color:#173f5f;
+  border:1px dashed white;
+  color:white;
+}
+
+
+.tooltip-metric-description-text {
+
+}
+
+.tooltip-metric-source-header {
+  font-weight:lighter;
+  margin-top:0.5em;
+  margin-bottom:0.25em;
+  font-size:0.8em;
+  border-bottom:1px solid #eee;
+}
+
+.tooltip-metric-description-source {
+  font-size:0.75em;
+}
+
+.tooltip-metric-icon {
+  height:12px;
+}
+
+
+
+
+#playerFilter {
+  width:100%;
+  font-size:1.25em;
+};
+
+.filterSubRow {
+  border:1px solid red;
+  height:0px;
+  overflow:hidden;
+  display:hidden;
+  margin-top:3em;
+  padding-top:3em;
+}
+
+#playerPositionFilters {
+  display:hidden;
+  margin-top:15px;
+}
+
+
+
+.playerFilterOption {
+  display:inline;
+  padding-left:2em;
+  padding-right:2em;
+  padding-top:0.25em;
+  padding-bottom:0.25em;
+  cursor:pointer;
+  font-weight:normal;
+  border:1px solid rgba(0,0,0,0);
+  font-size:0.8em;
+}
+
+.playerFilterOption:hover {
+  border:1px solid rgba(96,147,190,0.75);
+}
+
+
+.positionOption {
+  display:inline;
+  padding-left:2em;
+  padding-right:2em;
+  padding-top:0.25em;
+  padding-bottom:0.25em;
+  cursor:pointer;
+  font-weight:normal;
+  border:1px solid rgba(0,0,0,0);
+  font-size:0.8em;
+  user-select:none;
+}
+
+.positionOption:hover {
+  border:1px solid rgba(96,147,190,0.75);
+}
+
+
+.playerFilterOptionActive {
+  background-color:rgba(96,147,190,0.75);
+  color:black;
+  font-weight:normal;
+}
+
+.playerFilterOptionInActive {
+  color:black;
+  font-weight:normal;
+  background-color:white;
+}
+
+.explanation {
+  padding:1em;
+  border:2px dashed #173f5f;
+  border-radius:10px;
+  font-size:1.1em;
+  background-color:rgba(96,147,190,0.25);
+}
+
+
+.mobileOverlay {
+  margin:0;
+  padding:0;
+  left:0;
+  top:0;
+  position:fixed;
+  z-index:9999;
+  width:100vw;
+  height:100vh;
+  background-color:white;
+  padding-left:4em;
+  padding-right:4em;
+}
+
+.mobileOverlayContainer {
+  padding-top:2em;
+  width:75%
+}
+
+.mobileOverlayHeadline {
+  font-size:7em;
+  font-weight:bold;
+}
+
+.mobileOverlay p {
+  font-size:3em;
+}
+
+#mobileButton {
+  cursor:pointer;
+  color:white;
+  background-color:blue;
+  margin-top:1em;
+  padding:0.25em;
+  background-color:#173f5f;
+  font-size:3em;
+}
